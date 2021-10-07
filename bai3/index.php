@@ -2,7 +2,7 @@
 $number = $sum = 0;
 if (!empty($_POST)) {
     if (isset($_POST['number'])) {
-        $number = (int)$_POST['number'];
+        $number = $_POST['number'];
     }
     for ($i = 1; $i <= $number; $i++) {
         $sum += $i;

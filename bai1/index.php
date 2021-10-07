@@ -3,13 +3,13 @@ require_once "./xuly.php";
 $a = $b = $c = $delta = "";
 if (!empty($_POST)) {
     if (isset($_POST['a'])) {
-        $a = (int) $_POST['a'];
+        $a = $_POST['a'];
     }
     if (isset($_POST['b'])) {
-        $b = (int) $_POST['b'];
+        $b = $_POST['b'];
     }
     if (isset($_POST['c'])) {
-        $c = (int) $_POST['c'];
+        $c = $_POST['c'];
     }
 }
 ?>
@@ -28,18 +28,18 @@ if (!empty($_POST)) {
     <div class="container">
         <div class="card">
             <div class="card-header bg-success text-white">
-                <h2 class="text-center">Giải phương trình bậc 2:</h2>
+                <h2 class="text-center">Giải phương trình bậc 2</h2>
             </div>
             <div class="card-body">
                 <form action="" method="post">
                     <div class="mb-3">
-                        Nhập a: <input type="text" class="form-control" placeholder="Nhap a" value="<?= $a ?>" name="a" required="true">
+                        Nhập a: <input type="number" class="form-control" placeholder="Nhap a" value="<?= $a ?>" name="a" required="true">
                     </div>
                     <div class="mb-3">
-                        Nhập b: <input type="text" class="form-control" placeholder="Nhap b" value="<?= $b ?>" name="b" required="true">
+                        Nhập b: <input type="number" class="form-control" placeholder="Nhap b" value="<?= $b ?>" name="b" required="true">
                     </div>
                     <div class="mb-3">
-                        Nhập c: <input type="text" class="form-control" placeholder="Nhap c" value="<?= $c ?>" name="c" required="true">
+                        Nhập c: <input type="number" class="form-control" placeholder="Nhap c" value="<?= $c ?>" name="c" required="true">
                     </div>
                     <button type="submit" class="btn btn-success">Result</button>
                     <h2>Kết quả:</h2>

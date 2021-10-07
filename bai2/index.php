@@ -3,10 +3,10 @@ require_once "./xuly.php";
 $month = $year = "";
 if (!empty($_POST)) {
     if (isset($_POST['month'])) {
-        $month = (int) $_POST['month'];
+        $month =  $_POST['month'];
     }
     if (isset($_POST['year'])) {
-        $year = (int) $_POST['year'];
+        $year =  $_POST['year'];
     }
 }
 ?>
@@ -31,11 +31,11 @@ if (!empty($_POST)) {
                 <form action="" method="post">
                     <div class="mb-3">
                         Nhập tháng:
-                        <input type="text" class="form-control" placeholder="Nhập tháng" value="<?= $month ?>" name=" month" required="true">
+                        <input type="number" class="form-control" placeholder="Nhập tháng" value="<?= $month ?>" name=" month" required="true">
                     </div>
                     <div class="mb-3">
                         Nhập năm:
-                        <input type="text" class="form-control" placeholder="Nhập năm" value="<?= $year ?>" name="year" required="true">
+                        <input type="number" class="form-control" placeholder="Nhập năm" value="<?= $year ?>" name="year" required="true">
                     </div>
                     <button type="submit" class="btn btn-success">Result</button>
                     <h2>Kết quả:</h2>
